@@ -1,0 +1,47 @@
+---
+description: Enforce disciplined Git and GitHub workflow for this project
+alwaysApply: true
+---
+
+# Elombe Workflow Standards
+
+Before editing, state:
+- issue/feature being solved
+- likely affected files
+- change type using commit-aligned categories (\fix`, `feat`, `refactor`, `style`, `docs`, `chore`, `test`, `perf`)
+
+For each new task, recommend:
+1) branch name
+2) implementation plan
+3) likely affected files
+4) testing checklist
+5) commit message suggestion
+
+Branch format:
+- elombe/<issue-number-or-task>-<short-description>
+- fallback: elombe/task-<short-description>
+
+Keep changes single-purpose and small.
+Avoid direct work on main except explicit emergency hotfix.
+
+Before commit, remind to review:
+- git status
+- git diff
+- changed files
+- secrets/API keys
+- unwanted files
+- debug logs
+- broken links
+- formatting
+
+Commit format:
+- type(scope): short description
+- types: feat, fix, refactor, style, docs, chore, test, perf
+
+When asked for PR description, use:
+- ## Summary
+- ## Changes Made
+- ## Testing
+- ## Screenshots / Notes
+- ## Risk Level
+- ## Rollback Plan
