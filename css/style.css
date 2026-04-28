@@ -178,7 +178,7 @@ button { border:none; background:none; cursor:none; font-family:inherit; }
 }
 .hero-bg {
   position:absolute; inset:0;
-  z-index:1;
+  z-index:0;
   background:
     linear-gradient(180deg,rgba(2,21,30,.36),rgba(2,19,28,.52)),
     radial-gradient(ellipse 80% 55% at 50% 30%,rgba(38,149,183,.5),transparent 65%),
@@ -188,7 +188,7 @@ button { border:none; background:none; cursor:none; font-family:inherit; }
 .hero-noise {
   position:absolute;
   inset:0;
-  z-index:2;
+  z-index:1;
   background: radial-gradient(circle at 50% 35%,rgba(255,255,255,.05),transparent 42%);
   mix-blend-mode: screen;
   opacity:.18;
@@ -197,7 +197,7 @@ button { border:none; background:none; cursor:none; font-family:inherit; }
 .hero-media {
   position:absolute;
   inset:0;
-  z-index:4;
+  z-index:3;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -215,7 +215,7 @@ button { border:none; background:none; cursor:none; font-family:inherit; }
 }
 
 .hero-content {
-  position:relative; z-index:7;
+  position:relative; z-index:5;
   text-align:left;
   display:flex; flex-direction:column; align-items:center;
   max-width:980px;
@@ -228,7 +228,7 @@ button { border:none; background:none; cursor:none; font-family:inherit; }
   position:absolute;
   inset:0;
   border-radius:20px;
-  background:linear-gradient(180deg,rgba(3,8,16,.28),rgba(3,8,16,.16));
+  background:none;
   pointer-events:none;
   z-index:-1;
 }
