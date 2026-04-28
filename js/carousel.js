@@ -1,6 +1,7 @@
 let carouselObserver = null;
 let carouselTriggers = [];
 let carouselHandlers = [];
+let carouselResizeRaf = null;
 
 function destroyScrollCarousel() {
   carouselObserver?.kill();
@@ -9,6 +10,10 @@ function destroyScrollCarousel() {
   carouselTriggers = [];
   carouselHandlers.forEach(({ el, type, fn }) => el.removeEventListener(type, fn));
   carouselHandlers = [];
+  if (carouselResizeRaf) {
+    cancelAnimationFrame(carouselResizeRaf);
+    carouselResizeRaf = null;
+  }
 }
 
 function bind(el, type, fn) {
@@ -33,7 +38,12 @@ function initScrollCarousel() {
 
   const n = items.length;
   const rotateAmount = 360 / n;
-  const itemWidth = items[0].offsetWidth;
+  const itemWidth = items[0].offsetWidth || items[0].getBoundingClientRect().width;
+  if (!itemWidth || itemWidth < 10) {
+    // During some transition/layout states width can be zero; retry on next frame.
+    carouselResizeRaf = requestAnimationFrame(initScrollCarousel);
+    return;
+  }
   const halfAngle = (rotateAmount / 2) * (Math.PI / 180);
   const zTranslate = 2 * Math.tan(halfAngle);
   const radius = Math.round(itemWidth / zTranslate);
@@ -102,6 +112,8 @@ function initScrollCarousel() {
 
   bind(prevBtn, 'click', stepBackward);
   bind(nextBtn, 'click', stepForward);
+  if (prevBtn) prevBtn.style.pointerEvents = 'auto';
+  if (nextBtn) nextBtn.style.pointerEvents = 'auto';
 
   if (typeof Observer !== 'undefined') {
     carouselObserver = Observer.create({
@@ -145,6 +157,14 @@ function initScrollCarousel() {
 
   setActive(0);
   gsap.set(ring, { rotateY: 0 });
+
+  // Keep geometry stable across responsive resizes/orientation changes.
+  let resizeTimer = null;
+  const onResize = () => {
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => initScrollCarousel(), 120);
+  };
+  bind(window, 'resize', onResize);
 }
 
 function carouselExpandNavigate(item, href) {
