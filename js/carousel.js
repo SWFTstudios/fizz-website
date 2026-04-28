@@ -47,6 +47,26 @@ function initScrollCarousel() {
 
   let activeIdx = 0;
   let animating = false;
+  const flavorTheme = {
+    citrus: { primary: '#f59e0b', glow: 'rgba(245,158,11,.2)' },
+    berry: { primary: '#7c3aed', glow: 'rgba(124,58,237,.2)' },
+    tropical: { primary: '#10b981', glow: 'rgba(16,185,129,.2)' },
+    cherry: { primary: '#e11d48', glow: 'rgba(225,29,72,.2)' },
+    watermelon: { primary: '#db2777', glow: 'rgba(219,39,119,.2)' },
+    mango: { primary: '#ea580c', glow: 'rgba(234,88,12,.2)' },
+  };
+
+  function applyThemeForItem(item) {
+    const key = item?.dataset?.flavor;
+    const theme = flavorTheme[key];
+    if (!theme) return;
+    gsap.to(':root', {
+      '--primary': theme.primary,
+      '--primary-glow': theme.glow,
+      duration: reducedMotion ? 0 : 0.45,
+      ease: 'power2.out',
+    });
+  }
 
   function setActive(idx) {
     const i = ((idx % n) + n) % n;
@@ -54,6 +74,7 @@ function initScrollCarousel() {
     items.forEach((item, j) => item.classList.toggle('is-active', j === i));
     if (labelEl) labelEl.textContent = items[i].dataset.name || '';
     if (currentEl) currentEl.textContent = String(i + 1).padStart(2, '0');
+    applyThemeForItem(items[i]);
   }
 
   function goToIndex(idx) {

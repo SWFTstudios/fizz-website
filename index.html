@@ -24,7 +24,8 @@
   <!-- ── Navigation (outside Barba container) ── -->
   <header class="nav">
     <a href="index.html" class="nav-logo" aria-label="Fizz Home">
-      <img src="assets/Fizz_Logo_White.png" alt="Fizz" />
+      <span class="nav-logo-dock" data-nav-logo-dock></span>
+      <img src="assets/Fizz_Logo_White.png" alt="Fizz" class="nav-logo-fallback" />
     </a>
     <button class="nav-menu-btn" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -53,101 +54,38 @@
     ══════════════════════════════════════════════════ -->
     <section class="hero">
       <div class="hero-bg"></div>
-      <div class="hero-bubbles"></div>
-
-      <!-- Ghost background title -->
-      <span class="hero-ghost-title" aria-hidden="true">FIZZ</span>
-
-      <!-- 3D Orbital Carousel (decorative) -->
-      <div class="hero-stage">
-        <div class="hero-platform"></div>
-        <div class="hero-track">
-          <!-- 5 mini bottles orbiting -->
-          <div class="hero-item">
-            <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="32" y="0" width="36" height="27" rx="5" fill="#f59e0b" opacity=".85"/>
-              <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
-              <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
-              <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
-              <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
-              <rect x="8" y="25" width="84" height="153" rx="26" fill="#f59e0b"/>
-              <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.18)"/>
-              <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.1)"/>
-              <circle cx="35" cy="85" r="3" fill="rgba(255,255,255,.14)"/>
-              <circle cx="58" cy="70" r="2" fill="rgba(255,255,255,.1)"/>
-              <circle cx="68" cy="95" r="4" fill="rgba(255,255,255,.08)"/>
-            </svg>
-          </div>
-          <div class="hero-item">
-            <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="32" y="0" width="36" height="27" rx="5" fill="#8b5cf6" opacity=".85"/>
-              <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
-              <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
-              <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
-              <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
-              <rect x="8" y="25" width="84" height="153" rx="26" fill="#8b5cf6"/>
-              <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.18)"/>
-              <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.1)"/>
-              <circle cx="35" cy="85" r="3" fill="rgba(255,255,255,.14)"/>
-              <circle cx="58" cy="70" r="2" fill="rgba(255,255,255,.1)"/>
-            </svg>
-          </div>
-          <div class="hero-item">
-            <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="32" y="0" width="36" height="27" rx="5" fill="#10b981" opacity=".85"/>
-              <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
-              <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
-              <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
-              <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
-              <rect x="8" y="25" width="84" height="153" rx="26" fill="#10b981"/>
-              <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.18)"/>
-              <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.1)"/>
-            </svg>
-          </div>
-          <div class="hero-item">
-            <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="32" y="0" width="36" height="27" rx="5" fill="#f43f5e" opacity=".85"/>
-              <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
-              <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
-              <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
-              <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
-              <rect x="8" y="25" width="84" height="153" rx="26" fill="#f43f5e"/>
-              <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.18)"/>
-              <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.1)"/>
-            </svg>
-          </div>
-          <div class="hero-item">
-            <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="32" y="0" width="36" height="27" rx="5" fill="#ec4899" opacity=".85"/>
-              <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
-              <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
-              <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
-              <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
-              <rect x="8" y="25" width="84" height="153" rx="26" fill="#ec4899"/>
-              <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.18)"/>
-              <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.1)"/>
-            </svg>
-          </div>
+      <div class="hero-noise"></div>
+      <div class="hero-media" aria-hidden="true">
+        <div class="hero-bottle-shell">
+          <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="32" y="0" width="36" height="27" rx="5" fill="#0f5a74" opacity=".95"/>
+            <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.18)" stroke-width="2"/>
+            <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.18)" stroke-width="2"/>
+            <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.18)" stroke-width="2"/>
+            <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.18)" stroke-width="2"/>
+            <rect x="8" y="25" width="84" height="153" rx="26" fill="#1a87a9"/>
+            <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.12)"/>
+            <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.08)"/>
+          </svg>
         </div>
       </div>
 
-      <!-- Hero text (layered over stage) -->
-      <div class="hero-content" style="position:absolute;bottom:14%;width:100%;">
-        <div class="hero-eyebrow">New Collection 2026</div>
-        <h1 class="hero-title">FIZZ</h1>
-        <p class="hero-sub">Portable hydration engineered for bold flavour.<br>Six signatures. One obsession.</p>
+      <div class="hero-content">
+        <div class="hero-eyebrow">Because you deserve better hydration.</div>
+        <h1 class="hero-title">Cinematic Sparkling Hydration</h1>
+        <p class="hero-sub">Portable hydration engineered for bold flavour and lasting fizz. Scroll to explore every signature blend.</p>
         <div class="hero-cta">
-          <a href="shop.html" class="btn btn-primary">
-            Shop Now
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
-            </svg>
-          </a>
+          <a href="shop.html" class="btn btn-primary">Shop Now</a>
           <a href="#flavors" class="btn btn-ghost">Explore Flavours</a>
         </div>
       </div>
 
-      <!-- Scroll indicator -->
+      <div class="hero-logo-slot" data-hero-logo-slot>
+        <div class="hero-flip-logo" data-flip-logo>
+          <img src="assets/Fizz_Logo_White.png" alt="Fizz" />
+        </div>
+      </div>
+
       <div class="scroll-indicator" aria-hidden="true">
         <div class="scroll-line"></div>
         <span>Scroll</span>
@@ -496,6 +434,30 @@
         <div data-carousel="panel"></div>
         <div data-carousel="panel"></div>
         <div data-carousel="panel"></div>
+      </div>
+    </section>
+
+    <section class="featured-cycle" id="featured-products">
+      <div class="featured-cycle-header">
+        <div class="eyebrow">Featured Products</div>
+        <h2>Scroll Through Signature Picks</h2>
+      </div>
+      <div class="featured-cycle-stack">
+        <article class="featured-cycle-card is-active" data-featured-card data-color="#1a87a9">
+          <h3>Aero Chill Bottle</h3>
+          <p>Vacuum insulated shell designed for all-day temperature lock and max carbonation retention.</p>
+          <a href="product.html?flavor=tropical" class="btn btn-primary">View Product</a>
+        </article>
+        <article class="featured-cycle-card" data-featured-card data-color="#7c3aed">
+          <h3>Berry Night Edition</h3>
+          <p>Midnight finish, berry-forward profile, and the same PressCap seal for zero-fuss portability.</p>
+          <a href="product.html?flavor=berry" class="btn btn-primary">View Product</a>
+        </article>
+        <article class="featured-cycle-card" data-featured-card data-color="#ea580c">
+          <h3>Mango Heat Series</h3>
+          <p>Spicy-citrus character with a tactile grip body built for fast-paced city movement.</p>
+          <a href="product.html?flavor=mango" class="btn btn-primary">View Product</a>
+        </article>
       </div>
     </section>
 
