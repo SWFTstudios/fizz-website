@@ -43,6 +43,7 @@ function initCursor() {
 function initNav() {
   const btn     = document.querySelector('.nav-menu-btn');
   const overlay = document.querySelector('.nav-overlay');
+  const nav = document.querySelector('.nav');
   if (!btn || !overlay) return;
 
   const newBtn = btn.cloneNode(true);
@@ -51,16 +52,26 @@ function initNav() {
   newBtn.addEventListener('click', () => {
     const open = overlay.classList.toggle('is-open');
     newBtn.classList.toggle('is-open', open);
+    newBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
     document.body.style.overflow = open ? 'hidden' : '';
   });
 
   overlay.querySelectorAll('a').forEach((a) => {
     a.addEventListener('click', () => {
       overlay.classList.remove('is-open');
-      document.querySelector('.nav-menu-btn')?.classList.remove('is-open');
+      const navBtn = document.querySelector('.nav-menu-btn');
+      navBtn?.classList.remove('is-open');
+      navBtn?.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
     });
   });
+
+  const updateNavState = () => {
+    if (!nav) return;
+    nav.classList.toggle('has-scrolled', window.scrollY > 40);
+  };
+  updateNavState();
+  window.addEventListener('scroll', updateNavState, { passive: true });
 }
 
 /* ── Hero mini orbital carousel (decorative) ── */

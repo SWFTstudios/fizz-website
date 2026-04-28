@@ -4,21 +4,53 @@
 
 /* ── Hero entrance ── */
 function initHero() {
+  document.body.classList.add('has-hero-flip-logo');
   const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
   tl.from('.hero-eyebrow',     { opacity: 0, y: 20, duration: 0.7 }, 0.3)
-    .from('.hero-title',       { opacity: 0, y: 60, duration: 0.9 }, 0.5)
+    .from('.hero-title',       { opacity: 0, y: 30, duration: 0.9 }, 0.5)
     .from('.hero-sub',         { opacity: 0, y: 30, duration: 0.7 }, 0.75)
     .from('.hero-cta .btn',    { opacity: 0, y: 20, stagger: 0.1,  duration: 0.6 }, 0.9)
-    .from('.hero-stage',       { opacity: 0, y: 40, duration: 0.8 }, 0.6)
+    .from('.hero-bottle-shell',{ opacity: 0, y: 40, duration: 0.8 }, 0.6)
+    .from('.hero-flip-logo',   { opacity: 0, y: 20, duration: 0.55 }, 0.95)
     .from('.scroll-indicator', { opacity: 0, y: 12, duration: 0.6 }, 1.2);
 
-  gsap.to('.hero-ghost-title', {
-    y: '-18%', ease: 'none',
-    scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1.5 },
-  });
-  gsap.to('.hero-stage', {
-    y: '12%', ease: 'none',
+  gsap.to('.hero-bottle-shell', {
+    y: '16%', ease: 'none',
     scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 2 },
+  });
+
+  const logo = document.querySelector('[data-flip-logo]');
+  const navDock = document.querySelector('[data-nav-logo-dock]');
+  const heroSlot = document.querySelector('[data-hero-logo-slot]');
+  if (!logo || !navDock || !heroSlot || typeof Flip === 'undefined') return;
+
+  let isDocked = false;
+  const moveLogo = (dock) => {
+    if (dock === isDocked) return;
+    const state = Flip.getState(logo);
+    if (dock) {
+      navDock.appendChild(logo);
+      document.querySelector('.nav')?.classList.add('has-scrolled');
+      logo.classList.add('is-docked');
+    } else {
+      heroSlot.appendChild(logo);
+      document.querySelector('.nav')?.classList.remove('has-scrolled');
+      logo.classList.remove('is-docked');
+    }
+    Flip.from(state, {
+      duration: 0.7,
+      ease: 'power2.inOut',
+      absolute: true,
+      scale: true,
+    });
+    isDocked = dock;
+  };
+
+  ScrollTrigger.create({
+    trigger: '.hero',
+    start: 'bottom top+=12',
+    onEnter: () => moveLogo(true),
+    onLeaveBack: () => moveLogo(false),
   });
 }
 
@@ -75,6 +107,31 @@ function initProductPreview() {
       { opacity: 1, y: 0, stagger: 0.1, duration: 0.8, ease: 'power3.out',
         scrollTrigger: { trigger: section, start: 'top 75%', once: true } });
   }
+}
+
+/* ── Homepage featured cycle ── */
+function initFeaturedCycle() {
+  const section = document.querySelector('.featured-cycle');
+  const cards = gsap.utils.toArray('[data-featured-card]');
+  if (!section || cards.length < 2) return;
+
+  gsap.set(cards, { opacity: 0.2, scale: 0.9 });
+  gsap.set(cards[0], { opacity: 1, scale: 1 });
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: section,
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: 1,
+    },
+  });
+
+  cards.forEach((card, idx) => {
+    if (idx === 0) return;
+    tl.to(cards[idx - 1], { opacity: 0.2, scale: 0.9, duration: 1 }, idx)
+      .to(card, { opacity: 1, scale: 1, duration: 1 }, idx);
+  });
 }
 
 /* ── Shop grid stagger ── */
@@ -255,9 +312,9 @@ function initAnimations(namespace) {
   ScrollTrigger.refresh();
 
   if (namespace === 'home' || !namespace) {
-    initBubbles();
     initHero();
     initContentSplits();
+    initFeaturedCycle();
     initProductPreview();
     initScrollCarousel(); // scroll-driven 3D carousel
   }
