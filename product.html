@@ -16,7 +16,8 @@
 
   <header class="nav">
     <a href="index.html" class="nav-logo" aria-label="Fizz Home">
-      <img src="assets/Fizz_Logo_White.png" alt="Fizz" />
+      <span class="nav-logo-dock" data-nav-logo-dock></span>
+      <img src="assets/Fizz_Logo_White_Transparent.png" alt="Fizz" class="nav-logo-fallback" />
     </a>
     <button class="nav-menu-btn" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </header>
@@ -170,16 +171,57 @@
 
     <footer class="footer">
       <div class="footer-brand">
-        <div class="logo">FIZZ</div>
-        <p>Portable hydration, engineered for the bold.</p>
+        <img src="assets/Fizz_Logo_White_Transparent.png" alt="Fizz" class="footer-logo" />
+        <p>Portable hydration, engineered for the bold. Six flavours. One obsession.</p>
+        <div class="social">
+          <a class="social-link" href="#" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a class="social-link" href="#" aria-label="TikTok">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.3 6.3 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/>
+            </svg>
+          </a>
+          <a class="social-link" href="#" aria-label="Twitter/X">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
       </div>
-      <div class="footer-col"><h4>Products</h4><ul><li><a href="shop.html">All Flavours</a></li><li><a href="shop.html">New Arrivals</a></li><li><a href="shop.html">Bundles</a></li><li><a href="shop.html">Gift Sets</a></li></ul></div>
-      <div class="footer-col"><h4>Company</h4><ul><li><a href="#">About Fizz</a></li><li><a href="#">Sustainability</a></li><li><a href="#">Press</a></li><li><a href="#">Careers</a></li></ul></div>
-      <div class="footer-col"><h4>Support</h4><ul><li><a href="#">FAQ</a></li><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="index.html#contact">Contact Us</a></li></ul></div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="shop.html">All Flavours</a></li>
+          <li><a href="shop.html">New Arrivals</a></li>
+          <li><a href="shop.html">Bundles</a></li>
+          <li><a href="shop.html">Gift Sets</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Fizz</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </div>
     </footer>
     <div class="footer-bottom">
       <span>© 2026 Fizz. All rights reserved.</span>
-      <span>Privacy · Terms</span>
+      <span>Privacy Policy · Terms of Service</span>
     </div>
 
   </main>
