@@ -688,6 +688,7 @@ button { border:none; background:none; cursor:none; font-family:inherit; }
   font-family:var(--font-d); font-size:1.75rem; font-weight:800;
   color:var(--primary); margin-bottom:1rem;
 }
+.footer-logo { width:100px; height:auto; margin-bottom:1rem; display:block; }
 .footer-brand p { color:var(--text-muted); max-width:28ch; font-size:.9rem; line-height:1.75; }
 .footer-brand .social { display:flex; gap:1rem; margin-top:1.75rem; }
 .social-link {
@@ -791,7 +792,7 @@ button { border:none; background:none; cursor:none; font-family:inherit; }
 }
 .shop-card-btn {
   width:40px; height:40px; border-radius:50%;
-  background:var(--primary);
+  background:var(--primary); border:none; cursor:pointer;
   display:flex; align-items:center; justify-content:center;
   transition:all .3s var(--spring);
 }
