@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fizz — Portable Hydration, Reimagined</title>
+  <meta name="description" content="Premium portable fizz bottles. Crafted for the on-the-go generation."/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <!-- ── Custom Cursor ── -->
+  <div class="cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+
+  <!-- ── Page Transition Overlay ── -->
+  <div class="page-transition" aria-hidden="true">
+    <div class="pt-panel"></div>
+  </div>
+  <div id="carousel-expand-overlay" aria-hidden="true"></div>
+
+  <!-- ── Navigation (outside Barba container) ── -->
+  <header class="nav">
+    <a href="index.html" class="nav-logo" aria-label="Fizz Home">
+      <img src="assets/Fizz_Logo_White.png" alt="Fizz" />
+    </a>
+    <button class="nav-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ── Fullscreen nav overlay ── -->
+  <nav class="nav-overlay" aria-label="Site navigation">
+    <ul class="nav-overlay-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p class="nav-overlay-footer">© 2026 Fizz</p>
+  </nav>
+
+  <!-- ================================================================
+       BARBA WRAPPER
+  ================================================================ -->
+  <div data-barba="wrapper">
+  <main data-barba="container" data-barba-namespace="home">
+
+    <!-- ══════════════════════════════════════════════════
+         1. HERO
+    ══════════════════════════════════════════════════ -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-bubbles"></div>
+
+      <!-- Ghost background title -->
+      <span class="hero-ghost-title" aria-hidden="true">FIZZ</span>
+
+      <!-- 3D Orbital Carousel (decorative) -->
+      <div class="hero-stage">
+        <div class="hero-platform"></div>
+        <div class="hero-track">
+          <!-- 5 mini bottles orbiting -->
+          <div class="hero-item">
+            <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="32" y="0" width="36" height="27" rx="5" fill="#f59e0b" opacity=".85"/>
+              <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <rect x="8" y="25" width="84" height="153" rx="26" fill="#f59e0b"/>
+              <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.18)"/>
+              <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.1)"/>
+              <circle cx="35" cy="85" r="3" fill="rgba(255,255,255,.14)"/>
+              <circle cx="58" cy="70" r="2" fill="rgba(255,255,255,.1)"/>
+              <circle cx="68" cy="95" r="4" fill="rgba(255,255,255,.08)"/>
+            </svg>
+          </div>
+          <div class="hero-item">
+            <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="32" y="0" width="36" height="27" rx="5" fill="#8b5cf6" opacity=".85"/>
+              <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <rect x="8" y="25" width="84" height="153" rx="26" fill="#8b5cf6"/>
+              <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.18)"/>
+              <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.1)"/>
+              <circle cx="35" cy="85" r="3" fill="rgba(255,255,255,.14)"/>
+              <circle cx="58" cy="70" r="2" fill="rgba(255,255,255,.1)"/>
+            </svg>
+          </div>
+          <div class="hero-item">
+            <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="32" y="0" width="36" height="27" rx="5" fill="#10b981" opacity=".85"/>
+              <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <rect x="8" y="25" width="84" height="153" rx="26" fill="#10b981"/>
+              <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.18)"/>
+              <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.1)"/>
+            </svg>
+          </div>
+          <div class="hero-item">
+            <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="32" y="0" width="36" height="27" rx="5" fill="#f43f5e" opacity=".85"/>
+              <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <rect x="8" y="25" width="84" height="153" rx="26" fill="#f43f5e"/>
+              <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.18)"/>
+              <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.1)"/>
+            </svg>
+          </div>
+          <div class="hero-item">
+            <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="32" y="0" width="36" height="27" rx="5" fill="#ec4899" opacity=".85"/>
+              <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <rect x="8" y="25" width="84" height="153" rx="26" fill="#ec4899"/>
+              <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.18)"/>
+              <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.1)"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero text (layered over stage) -->
+      <div class="hero-content" style="position:absolute;bottom:14%;width:100%;">
+        <div class="hero-eyebrow">New Collection 2026</div>
+        <h1 class="hero-title">FIZZ</h1>
+        <p class="hero-sub">Portable hydration engineered for bold flavour.<br>Six signatures. One obsession.</p>
+        <div class="hero-cta">
+          <a href="shop.html" class="btn btn-primary">
+            Shop Now
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <a href="#flavors" class="btn btn-ghost">Explore Flavours</a>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         2. MARQUEE
+    ══════════════════════════════════════════════════ -->
+    <div class="marquee-section" aria-hidden="true">
+      <div class="marquee-row marquee-row-1">
+        <span class="marquee-item hi">FIZZ</span><span class="marquee-sep">·</span>
+        <span class="marquee-item">Citrus Burst</span><span class="marquee-sep">·</span>
+        <span class="marquee-item">Berry Blast</span><span class="marquee-sep">·</span>
+        <span class="marquee-item hi">PORTABLE</span><span class="marquee-sep">·</span>
+        <span class="marquee-item">Tropical Storm</span><span class="marquee-sep">·</span>
+        <span class="marquee-item">Cherry Pop</span><span class="marquee-sep">·</span>
+        <span class="marquee-item hi">FIZZ</span><span class="marquee-sep">·</span>
+        <span class="marquee-item">Citrus Burst</span><span class="marquee-sep">·</span>
+        <span class="marquee-item">Berry Blast</span><span class="marquee-sep">·</span>
+        <span class="marquee-item hi">PORTABLE</span><span class="marquee-sep">·</span>
+        <span class="marquee-item">Tropical Storm</span><span class="marquee-sep">·</span>
+        <span class="marquee-item">Cherry Pop</span><span class="marquee-sep">·</span>
+      </div>
+      <div class="marquee-row marquee-row-2">
+        <span class="marquee-item">Watermelon Wave</span><span class="marquee-sep">·</span>
+        <span class="marquee-item hi">HYDRATION</span><span class="marquee-sep">·</span>
+        <span class="marquee-item">Mango Tango</span><span class="marquee-sep">·</span>
+        <span class="marquee-item">Bold Flavours</span><span class="marquee-sep">·</span>
+        <span class="marquee-item hi">2026</span><span class="marquee-sep">·</span>
+        <span class="marquee-item">Zero Sugar</span><span class="marquee-sep">·</span>
+        <span class="marquee-item">Watermelon Wave</span><span class="marquee-sep">·</span>
+        <span class="marquee-item hi">HYDRATION</span><span class="marquee-sep">·</span>
+        <span class="marquee-item">Mango Tango</span><span class="marquee-sep">·</span>
+        <span class="marquee-item">Bold Flavours</span><span class="marquee-sep">·</span>
+        <span class="marquee-item hi">2026</span><span class="marquee-sep">·</span>
+        <span class="marquee-item">Zero Sugar</span><span class="marquee-sep">·</span>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         3. CONTENT SPLIT A — Img/Video left, text right
+    ══════════════════════════════════════════════════ -->
+    <section class="content-split">
+      <div class="cs-media">
+        <div class="cs-media-inner">
+          <div class="cs-media-badge">Campaign 2026</div>
+          <div class="cs-media-label">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"/>
+            </svg>
+            <span>Video / Image</span>
+          </div>
+        </div>
+      </div>
+      <div class="cs-text">
+        <div class="eyebrow">Our story</div>
+        <h2 class="reveal-up">Built for the bold.<br>Made for the road.</h2>
+        <p class="reveal-up">Fizz was born from one frustration: flat drinks at the worst moments. We engineered a bottle that keeps your beverages effervescent, ice-cold, and always within reach.</p>
+        <a href="shop.html" class="btn btn-ghost reveal-up">
+          Discover More
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         4. CONTENT SPLIT B — Text left, Img/Video right
+    ══════════════════════════════════════════════════ -->
+    <section class="content-split reverse">
+      <div class="cs-media">
+        <div class="cs-media-inner">
+          <div class="cs-media-badge">Technology</div>
+          <div class="cs-media-label">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M9 9.75h.008v.008H9V9.75z"/>
+            </svg>
+            <span>Image / Video</span>
+          </div>
+        </div>
+      </div>
+      <div class="cs-text">
+        <div class="eyebrow">Engineering</div>
+        <h2 class="reveal-up">PressCap™ seal.<br>Zero escape.</h2>
+        <p class="reveal-up">Our patented double-wall vacuum insulation and PressCap™ lid lock keeps carbonation in and spills out. Up to 36 hours cold. Lifetime of bold.</p>
+        <a href="product.html" class="btn btn-primary reveal-up">
+          See the Tech
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         5. FLAVOR SLIDER — Interactive 3D Carousel
+    ══════════════════════════════════════════════════ -->
+    <section class="flavor-section carousel-scroll-section" id="flavors" data-carousel="component">
+      <div class="flavor-bg-glow" aria-hidden="true"></div>
+
+      <div class="flavor-header carousel-section-header">
+        <div class="eyebrow" style="justify-content:center;">Six Signatures</div>
+        <h2>Pick your flavour.</h2>
+      </div>
+
+      <!-- 3D Carousel -->
+      <div class="c3d-wrapper carousel-sticky" data-carousel="wrap">
+        <div class="c3d-scene">
+          <div class="c3d-track" data-carousel="ring">
+
+            <!-- Card 1: Citrus Burst -->
+            <div class="c3d-item" data-carousel="item" data-name="Citrus Burst" data-flavor="citrus" data-href="product.html?flavor=citrus" data-gradient="linear-gradient(135deg,#f59e0b,#fbbf24)" data-sub="Valencia Orange · Yuzu · Lemon" data-price="$28.00" tabindex="0" role="button" aria-label="View Citrus Burst product">
+              <div class="c3d-card" data-carousel="image">
+                <div class="c3d-card-flavor-bg" style="background:linear-gradient(135deg,#f59e0b,#fbbf24);" data-carousel="bg"></div>
+                <div class="c3d-card-top">
+                  <span class="c3d-num">01</span>
+                  <span class="c3d-tag">New</span>
+                </div>
+                <div class="c3d-bottle">
+                  <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="32" y="0" width="36" height="27" rx="5" fill="#d97706" opacity=".9"/>
+                    <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <rect x="8" y="25" width="84" height="153" rx="26" fill="#f59e0b"/>
+                    <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.2)"/>
+                    <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.12)"/>
+                    <circle cx="35" cy="85" r="3.5" fill="rgba(255,255,255,.2)"/>
+                    <circle cx="58" cy="68" r="2.5" fill="rgba(255,255,255,.15)"/>
+                    <circle cx="70" cy="93" r="4" fill="rgba(255,255,255,.1)"/>
+                    <circle cx="44" cy="58" r="2" fill="rgba(255,255,255,.15)"/>
+                    <!-- Citrus slice icon -->
+                    <circle cx="50" cy="90" r="16" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+                    <line x1="50" y1="74" x2="50" y2="106" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+                    <line x1="34" y1="90" x2="66" y2="90" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+                    <line x1="39" y1="79" x2="61" y2="101" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+                    <line x1="61" y1="79" x2="39" y2="101" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+                  </svg>
+                </div>
+                <div class="c3d-card-bottom">
+                  <div class="c3d-name">Citrus Burst</div>
+                  <div class="c3d-sub">Valencia Orange · Yuzu · Lemon</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Berry Blast -->
+            <div class="c3d-item" data-carousel="item" data-name="Berry Blast" data-flavor="berry" data-href="product.html?flavor=berry" data-gradient="linear-gradient(135deg,#7c3aed,#a78bfa)" data-sub="Blueberry · Açaí · Blackcurrant" data-price="$28.00" tabindex="0" role="button" aria-label="View Berry Blast product">
+              <div class="c3d-card" data-carousel="image">
+                <div class="c3d-card-flavor-bg" style="background:linear-gradient(135deg,#7c3aed,#a78bfa);" data-carousel="bg"></div>
+                <div class="c3d-card-top">
+                  <span class="c3d-num">02</span>
+                  <span class="c3d-tag">Fan Fave</span>
+                </div>
+                <div class="c3d-bottle">
+                  <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="32" y="0" width="36" height="27" rx="5" fill="#6d28d9" opacity=".9"/>
+                    <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <rect x="8" y="25" width="84" height="153" rx="26" fill="#8b5cf6"/>
+                    <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.18)"/>
+                    <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.1)"/>
+                    <circle cx="42" cy="80" r="5" fill="rgba(255,255,255,.15)"/>
+                    <circle cx="52" cy="72" r="4" fill="rgba(255,255,255,.12)"/>
+                    <circle cx="60" cy="82" r="5" fill="rgba(255,255,255,.15)"/>
+                    <circle cx="48" cy="90" r="4" fill="rgba(255,255,255,.12)"/>
+                    <circle cx="58" cy="92" r="3" fill="rgba(255,255,255,.1)"/>
+                    <circle cx="35" cy="65" r="2" fill="rgba(255,255,255,.12)"/>
+                    <circle cx="66" cy="68" r="2" fill="rgba(255,255,255,.1)"/>
+                  </svg>
+                </div>
+                <div class="c3d-card-bottom">
+                  <div class="c3d-name">Berry Blast</div>
+                  <div class="c3d-sub">Blueberry · Açaí · Blackcurrant</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Tropical Storm -->
+            <div class="c3d-item" data-carousel="item" data-name="Tropical Storm" data-flavor="tropical" data-href="product.html?flavor=tropical" data-gradient="linear-gradient(135deg,#059669,#34d399)" data-sub="Pineapple · Coconut · Passionfruit" data-price="$34.00" tabindex="0" role="button" aria-label="View Tropical Storm product">
+              <div class="c3d-card" data-carousel="image">
+                <div class="c3d-card-flavor-bg" style="background:linear-gradient(135deg,#059669,#34d399);" data-carousel="bg"></div>
+                <div class="c3d-card-top">
+                  <span class="c3d-num">03</span>
+                  <span class="c3d-tag">Summer</span>
+                </div>
+                <div class="c3d-bottle">
+                  <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="32" y="0" width="36" height="27" rx="5" fill="#047857" opacity=".9"/>
+                    <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <rect x="8" y="25" width="84" height="153" rx="26" fill="#10b981"/>
+                    <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.18)"/>
+                    <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.1)"/>
+                    <!-- Pineapple-like icon -->
+                    <ellipse cx="50" cy="80" rx="12" ry="16" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.25)" stroke-width="1"/>
+                    <line x1="50" y1="64" x2="44" y2="56" stroke="rgba(255,255,255,.3)" stroke-width="1.5"/>
+                    <line x1="50" y1="64" x2="50" y2="54" stroke="rgba(255,255,255,.3)" stroke-width="1.5"/>
+                    <line x1="50" y1="64" x2="56" y2="56" stroke="rgba(255,255,255,.3)" stroke-width="1.5"/>
+                  </svg>
+                </div>
+                <div class="c3d-card-bottom">
+                  <div class="c3d-name">Tropical Storm</div>
+                  <div class="c3d-sub">Pineapple · Coconut · Passionfruit</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4: Cherry Pop -->
+            <div class="c3d-item" data-carousel="item" data-name="Cherry Pop" data-flavor="cherry" data-href="product.html?flavor=cherry" data-gradient="linear-gradient(135deg,#e11d48,#fb7185)" data-sub="Black Cherry · Hibiscus · Rose" data-price="$28.00" tabindex="0" role="button" aria-label="View Cherry Pop product">
+              <div class="c3d-card" data-carousel="image">
+                <div class="c3d-card-flavor-bg" style="background:linear-gradient(135deg,#e11d48,#fb7185);" data-carousel="bg"></div>
+                <div class="c3d-card-top">
+                  <span class="c3d-num">04</span>
+                  <span class="c3d-tag">Bold</span>
+                </div>
+                <div class="c3d-bottle">
+                  <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="32" y="0" width="36" height="27" rx="5" fill="#be123c" opacity=".9"/>
+                    <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <rect x="8" y="25" width="84" height="153" rx="26" fill="#f43f5e"/>
+                    <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.18)"/>
+                    <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.1)"/>
+                    <circle cx="44" cy="82" r="8" fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.25)" stroke-width="1"/>
+                    <circle cx="58" cy="78" r="8" fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.25)" stroke-width="1"/>
+                    <line x1="44" y1="74" x2="48" y2="66" stroke="rgba(255,255,255,.3)" stroke-width="1.5"/>
+                    <line x1="58" y1="70" x2="54" y2="62" stroke="rgba(255,255,255,.3)" stroke-width="1.5"/>
+                    <line x1="48" y1="66" x2="54" y2="62" stroke="rgba(255,255,255,.25)" stroke-width="1.2"/>
+                  </svg>
+                </div>
+                <div class="c3d-card-bottom">
+                  <div class="c3d-name">Cherry Pop</div>
+                  <div class="c3d-sub">Black Cherry · Hibiscus · Rose</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5: Watermelon Wave -->
+            <div class="c3d-item" data-carousel="item" data-name="Watermelon Wave" data-flavor="watermelon" data-href="product.html?flavor=watermelon" data-gradient="linear-gradient(135deg,#db2777,#f9a8d4)" data-sub="Watermelon · Mint · Lime" data-price="$32.00" tabindex="0" role="button" aria-label="View Watermelon Wave product">
+              <div class="c3d-card" data-carousel="image">
+                <div class="c3d-card-flavor-bg" style="background:linear-gradient(135deg,#db2777,#f9a8d4);" data-carousel="bg"></div>
+                <div class="c3d-card-top">
+                  <span class="c3d-num">05</span>
+                  <span class="c3d-tag">Limited</span>
+                </div>
+                <div class="c3d-bottle">
+                  <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="32" y="0" width="36" height="27" rx="5" fill="#9d174d" opacity=".9"/>
+                    <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <rect x="8" y="25" width="84" height="153" rx="26" fill="#ec4899"/>
+                    <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.18)"/>
+                    <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.1)"/>
+                    <!-- Watermelon wedge -->
+                    <path d="M 35 95 A 18 18 0 0 1 65 95 Z" fill="rgba(255,255,255,.15)" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
+                    <path d="M 37 95 A 16 16 0 0 1 63 95 Z" fill="rgba(255,255,255,.08)"/>
+                    <circle cx="42" cy="90" r="1.5" fill="rgba(0,0,0,.2)"/>
+                    <circle cx="50" cy="88" r="1.5" fill="rgba(0,0,0,.2)"/>
+                    <circle cx="58" cy="90" r="1.5" fill="rgba(0,0,0,.2)"/>
+                  </svg>
+                </div>
+                <div class="c3d-card-bottom">
+                  <div class="c3d-name">Watermelon Wave</div>
+                  <div class="c3d-sub">Watermelon · Mint · Lime</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6: Mango Tango -->
+            <div class="c3d-item" data-carousel="item" data-name="Mango Tango" data-flavor="mango" data-href="product.html?flavor=mango" data-gradient="linear-gradient(135deg,#ea580c,#fb923c)" data-sub="Alphonso Mango · Chilli · Tajín" data-price="$28.00" tabindex="0" role="button" aria-label="View Mango Tango product">
+              <div class="c3d-card" data-carousel="image">
+                <div class="c3d-card-flavor-bg" style="background:linear-gradient(135deg,#ea580c,#fb923c);" data-carousel="bg"></div>
+                <div class="c3d-card-top">
+                  <span class="c3d-num">06</span>
+                  <span class="c3d-tag">Spicy</span>
+                </div>
+                <div class="c3d-bottle">
+                  <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="32" y="0" width="36" height="27" rx="5" fill="#c2410c" opacity=".9"/>
+                    <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+                    <rect x="8" y="25" width="84" height="153" rx="26" fill="#f97316"/>
+                    <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.18)"/>
+                    <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.1)"/>
+                    <!-- Mango shape -->
+                    <ellipse cx="50" cy="82" rx="14" ry="18" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+                    <path d="M 50 64 C 54 58 58 60 50 64" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="1.5"/>
+                    <circle cx="50" cy="82" r="5" fill="rgba(255,255,255,.08)"/>
+                  </svg>
+                </div>
+                <div class="c3d-card-bottom">
+                  <div class="c3d-name">Mango Tango</div>
+                  <div class="c3d-sub">Alphonso Mango · Chilli · Tajín</div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /c3d-track -->
+        </div><!-- /c3d-scene -->
+
+        <!-- Carousel controls -->
+        <nav class="c3d-nav carousel-nav-bar" aria-label="Carousel navigation">
+          <button class="c3d-nav-btn c3d-prev" data-carousel="prev" aria-label="Previous flavour">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M17 10a.75.75 0 01-.75.75H5.612l4.158 3.96a.75.75 0 11-1.04 1.08l-5.5-5.25a.75.75 0 010-1.08l5.5-5.25a.75.75 0 111.04 1.08L5.612 9.25H16.25A.75.75 0 0117 10z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+          <div class="c3d-info">
+            <div class="c3d-current">01</div>
+            <div class="c3d-total" data-carousel="label">of 06</div>
+          </div>
+          <button class="c3d-nav-btn c3d-next" data-carousel="next" aria-label="Next flavour">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+        </nav>
+        <div class="c3d-dots" role="tablist" aria-label="Flavour selector">
+          <button class="c3d-dot is-active" aria-label="Citrus Burst"></button>
+          <button class="c3d-dot" aria-label="Berry Blast"></button>
+          <button class="c3d-dot" aria-label="Tropical Storm"></button>
+          <button class="c3d-dot" aria-label="Cherry Pop"></button>
+          <button class="c3d-dot" aria-label="Watermelon Wave"></button>
+          <button class="c3d-dot" aria-label="Mango Tango"></button>
+        </div>
+
+      </div><!-- /c3d-wrapper -->
+      <div class="carousel-panels" aria-hidden="true">
+        <div data-carousel="panel"></div>
+        <div data-carousel="panel"></div>
+        <div data-carousel="panel"></div>
+        <div data-carousel="panel"></div>
+        <div data-carousel="panel"></div>
+        <div data-carousel="panel"></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         6. PRODUCT PREVIEW
+    ══════════════════════════════════════════════════ -->
+    <section class="product-preview">
+      <!-- Visual -->
+      <div class="pp-visual">
+        <div class="pp-bottle-stage">
+          <div class="pp-glow" aria-hidden="true"></div>
+          <div class="pp-bottle">
+            <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="32" y="0" width="36" height="27" rx="5" fill="#047857" opacity=".9"/>
+              <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+              <rect x="8" y="25" width="84" height="153" rx="26" fill="#10b981"/>
+              <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.2)"/>
+              <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.12)"/>
+              <circle cx="35" cy="85" r="3.5" fill="rgba(255,255,255,.2)"/>
+              <circle cx="58" cy="68" r="2.5" fill="rgba(255,255,255,.15)"/>
+              <circle cx="70" cy="93" r="4" fill="rgba(255,255,255,.1)"/>
+            </svg>
+          </div>
+        </div>
+        <div class="pp-thumbs">
+          <div class="pp-thumb is-active">Img</div>
+          <div class="pp-thumb">Video</div>
+          <div class="pp-thumb">360°</div>
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="pp-info">
+        <div class="eyebrow">Featured Product</div>
+        <h2 class="product-title">Tropical Storm</h2>
+        <div class="product-price">$34.00</div>
+        <div class="divider"></div>
+        <p class="product-desc">Pineapple, coconut, and passionfruit collide in this sun-drenched blend. Zero sugar. Maximum refresh. PressCap™ seal keeps every sip as effervescent as the first.</p>
+        <div class="variants-label">Choose Variant</div>
+        <div class="variants">
+          <button class="variant-btn is-active" aria-label="Tropical Storm">
+            <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="25" width="84" height="153" rx="26" fill="#10b981"/>
+            </svg>
+          </button>
+          <button class="variant-btn" aria-label="Citrus Burst">
+            <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="25" width="84" height="153" rx="26" fill="#f59e0b"/>
+            </svg>
+          </button>
+          <button class="variant-btn" aria-label="Berry Blast">
+            <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="25" width="84" height="153" rx="26" fill="#8b5cf6"/>
+            </svg>
+          </button>
+        </div>
+        <div class="product-actions">
+          <a href="product.html" class="btn btn-primary btn-cart">
+            View Product
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <a href="shop.html" class="btn btn-ghost">All Flavours</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         FOOTER
+    ══════════════════════════════════════════════════ -->
+    <footer class="footer" id="contact">
+      <div class="footer-brand">
+        <div class="logo">FIZZ</div>
+        <p>Portable hydration, engineered for the bold. Six flavours. One obsession.</p>
+        <div class="social">
+          <a class="social-link" href="#" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a class="social-link" href="#" aria-label="TikTok">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.3 6.3 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/>
+            </svg>
+          </a>
+          <a class="social-link" href="#" aria-label="Twitter/X">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="shop.html">All Flavours</a></li>
+          <li><a href="shop.html">New Arrivals</a></li>
+          <li><a href="shop.html">Bundles</a></li>
+          <li><a href="shop.html">Gift Sets</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Fizz</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </footer>
+    <div class="footer-bottom">
+      <span>© 2026 Fizz. All rights reserved.</span>
+      <span>Privacy Policy · Terms of Service</span>
+    </div>
+
+  </main>
+  </div><!-- /barba wrapper -->
+
+  <!-- ── Scripts ── -->
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
+  <!-- Lenis smooth scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <!-- Barba.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.10.3/dist/barba.umd.min.js"></script>
+
+  <script>
+    // Register GSAP plugins
+    gsap.registerPlugin(ScrollTrigger, Flip, Observer);
+  </script>
+
+  <script src="js/carousel.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

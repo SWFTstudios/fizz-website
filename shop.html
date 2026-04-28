@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop — Fizz</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <div class="cursor"><div class="cursor-dot"></div><div class="cursor-ring"></div></div>
+  <div class="page-transition" aria-hidden="true"><div class="pt-panel"></div></div>
+
+  <header class="nav">
+    <a href="index.html" class="nav-logo" aria-label="Fizz Home">
+      <img src="assets/Fizz_Logo_White.png" alt="Fizz" />
+    </a>
+    <button class="nav-menu-btn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </header>
+  <nav class="nav-overlay" aria-label="Site navigation">
+    <ul class="nav-overlay-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <p class="nav-overlay-footer">© 2026 Fizz</p>
+  </nav>
+
+  <div data-barba="wrapper">
+  <main data-barba="container" data-barba-namespace="shop">
+
+    <!-- Hero -->
+    <section class="shop-hero">
+      <div class="eyebrow" style="justify-content:center;margin-bottom:1.25rem;">All Flavours</div>
+      <h1>Shop<br><span style="color:var(--primary);">Fizz.</span></h1>
+      <p>Six bold signatures, one brilliant bottle. Pick your obsession.</p>
+    </section>
+
+    <!-- Filters -->
+    <div class="shop-filters">
+      <button class="filter-btn is-active">All</button>
+      <button class="filter-btn">Fruity</button>
+      <button class="filter-btn">Tropical</button>
+      <button class="filter-btn">Bold</button>
+      <button class="filter-btn">Limited</button>
+      <button class="filter-btn">Bundles</button>
+    </div>
+
+    <!-- Grid -->
+    <div class="shop-grid">
+
+      <!-- Citrus Burst -->
+      <a href="product.html?flavor=citrus" class="shop-card">
+        <div class="shop-card-img">
+          <div class="shop-card-img-bg" style="background:linear-gradient(135deg,#f59e0b,#fde68a);"></div>
+          <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="32" y="0" width="36" height="27" rx="5" fill="#d97706" opacity=".9"/>
+            <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <rect x="8" y="25" width="84" height="153" rx="26" fill="#f59e0b"/>
+            <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.2)"/>
+            <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.12)"/>
+            <circle cx="35" cy="85" r="3.5" fill="rgba(255,255,255,.2)"/>
+            <circle cx="58" cy="68" r="2.5" fill="rgba(255,255,255,.15)"/>
+            <circle cx="70" cy="93" r="4" fill="rgba(255,255,255,.1)"/>
+          </svg>
+        </div>
+        <div class="shop-card-body">
+          <div class="shop-card-flavor">Fruity</div>
+          <div class="shop-card-name">Citrus Burst</div>
+          <div style="font-size:.8rem;color:var(--text-muted);margin-top:.25rem;">Valencia Orange · Yuzu · Lemon</div>
+          <div class="shop-card-footer">
+            <span class="shop-card-price">$28.00</span>
+            <div class="shop-card-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Berry Blast -->
+      <a href="product.html?flavor=berry" class="shop-card">
+        <div class="shop-card-img">
+          <div class="shop-card-img-bg" style="background:linear-gradient(135deg,#7c3aed,#c4b5fd);"></div>
+          <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="32" y="0" width="36" height="27" rx="5" fill="#6d28d9" opacity=".9"/>
+            <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <rect x="8" y="25" width="84" height="153" rx="26" fill="#8b5cf6"/>
+            <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.18)"/>
+            <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.1)"/>
+            <circle cx="42" cy="80" r="5" fill="rgba(255,255,255,.15)"/>
+            <circle cx="52" cy="72" r="4" fill="rgba(255,255,255,.12)"/>
+            <circle cx="60" cy="82" r="5" fill="rgba(255,255,255,.15)"/>
+            <circle cx="48" cy="90" r="4" fill="rgba(255,255,255,.12)"/>
+          </svg>
+        </div>
+        <div class="shop-card-body">
+          <div class="shop-card-flavor">Fan Fave</div>
+          <div class="shop-card-name">Berry Blast</div>
+          <div style="font-size:.8rem;color:var(--text-muted);margin-top:.25rem;">Blueberry · Açaí · Blackcurrant</div>
+          <div class="shop-card-footer">
+            <span class="shop-card-price">$28.00</span>
+            <div class="shop-card-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Tropical Storm -->
+      <a href="product.html?flavor=tropical" class="shop-card">
+        <div class="shop-card-img">
+          <div class="shop-card-img-bg" style="background:linear-gradient(135deg,#059669,#6ee7b7);"></div>
+          <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="32" y="0" width="36" height="27" rx="5" fill="#047857" opacity=".9"/>
+            <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <rect x="8" y="25" width="84" height="153" rx="26" fill="#10b981"/>
+            <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.18)"/>
+            <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.1)"/>
+            <circle cx="35" cy="85" r="3.5" fill="rgba(255,255,255,.2)"/>
+            <circle cx="58" cy="68" r="2.5" fill="rgba(255,255,255,.15)"/>
+          </svg>
+        </div>
+        <div class="shop-card-body">
+          <div class="shop-card-flavor">Tropical</div>
+          <div class="shop-card-name">Tropical Storm</div>
+          <div style="font-size:.8rem;color:var(--text-muted);margin-top:.25rem;">Pineapple · Coconut · Passionfruit</div>
+          <div class="shop-card-footer">
+            <span class="shop-card-price">$34.00</span>
+            <div class="shop-card-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Cherry Pop -->
+      <a href="product.html?flavor=cherry" class="shop-card">
+        <div class="shop-card-img">
+          <div class="shop-card-img-bg" style="background:linear-gradient(135deg,#e11d48,#fda4af);"></div>
+          <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="32" y="0" width="36" height="27" rx="5" fill="#be123c" opacity=".9"/>
+            <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <rect x="8" y="25" width="84" height="153" rx="26" fill="#f43f5e"/>
+            <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.18)"/>
+            <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.1)"/>
+          </svg>
+        </div>
+        <div class="shop-card-body">
+          <div class="shop-card-flavor">Bold</div>
+          <div class="shop-card-name">Cherry Pop</div>
+          <div style="font-size:.8rem;color:var(--text-muted);margin-top:.25rem;">Black Cherry · Hibiscus · Rose</div>
+          <div class="shop-card-footer">
+            <span class="shop-card-price">$28.00</span>
+            <div class="shop-card-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Watermelon Wave -->
+      <a href="product.html?flavor=watermelon" class="shop-card">
+        <div class="shop-card-img">
+          <div class="shop-card-img-bg" style="background:linear-gradient(135deg,#db2777,#fbcfe8);"></div>
+          <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="32" y="0" width="36" height="27" rx="5" fill="#9d174d" opacity=".9"/>
+            <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <rect x="8" y="25" width="84" height="153" rx="26" fill="#ec4899"/>
+            <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.18)"/>
+            <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.1)"/>
+          </svg>
+        </div>
+        <div class="shop-card-body">
+          <div class="shop-card-flavor">Limited</div>
+          <div class="shop-card-name">Watermelon Wave</div>
+          <div style="font-size:.8rem;color:var(--text-muted);margin-top:.25rem;">Watermelon · Mint · Lime</div>
+          <div class="shop-card-footer">
+            <span class="shop-card-price">$32.00</span>
+            <div class="shop-card-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Mango Tango -->
+      <a href="product.html?flavor=mango" class="shop-card">
+        <div class="shop-card-img">
+          <div class="shop-card-img-bg" style="background:linear-gradient(135deg,#ea580c,#fed7aa);"></div>
+          <svg viewBox="0 0 100 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="32" y="0" width="36" height="27" rx="5" fill="#c2410c" opacity=".9"/>
+            <line x1="40" y1="4" x2="40" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <line x1="47" y1="4" x2="47" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <line x1="54" y1="4" x2="54" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <line x1="61" y1="4" x2="61" y2="23" stroke="rgba(0,0,0,.15)" stroke-width="2"/>
+            <rect x="8" y="25" width="84" height="153" rx="26" fill="#f97316"/>
+            <rect x="18" y="35" width="16" height="68" rx="8" fill="rgba(255,255,255,.18)"/>
+            <path d="M8 115 Q18 100 28 115 Q38 130 48 115 Q58 100 68 115 Q78 130 88 115 L92 178 8 178Z" fill="rgba(255,255,255,.1)"/>
+          </svg>
+        </div>
+        <div class="shop-card-body">
+          <div class="shop-card-flavor">Spicy</div>
+          <div class="shop-card-name">Mango Tango</div>
+          <div style="font-size:.8rem;color:var(--text-muted);margin-top:.25rem;">Alphonso Mango · Chilli · Tajín</div>
+          <div class="shop-card-footer">
+            <span class="shop-card-price">$28.00</span>
+            <div class="shop-card-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+
+    </div><!-- /shop-grid -->
+
+    <footer class="footer">
+      <div class="footer-brand">
+        <div class="logo">FIZZ</div>
+        <p>Portable hydration, engineered for the bold.</p>
+      </div>
+      <div class="footer-col"><h4>Products</h4><ul><li><a href="shop.html">All Flavours</a></li><li><a href="#">Bundles</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Press</a></li></ul></div>
+      <div class="footer-col"><h4>Support</h4><ul><li><a href="#">FAQ</a></li><li><a href="#">Contact</a></li></ul></div>
+    </footer>
+    <div class="footer-bottom">
+      <span>© 2026 Fizz. All rights reserved.</span>
+      <span>Privacy · Terms</span>
+    </div>
+
+  </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.10.3/dist/barba.umd.min.js"></script>
+  <script>gsap.registerPlugin(ScrollTrigger);</script>
+  <script src="js/carousel.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

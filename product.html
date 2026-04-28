@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product — Fizz</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <div class="cursor"><div class="cursor-dot"></div><div class="cursor-ring"></div></div>
+  <div class="page-transition" aria-hidden="true"><div class="pt-panel"></div></div>
+
+  <!-- Flavor hero overlay — filled by JS from URL param / transition state -->
+  <div id="carousel-expand-overlay" class="product-hero-overlay" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a href="index.html" class="nav-logo" aria-label="Fizz Home">
+      <img src="assets/Fizz_Logo_White.png" alt="Fizz" />
+    </a>
+    <button class="nav-menu-btn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </header>
+  <nav class="nav-overlay" aria-label="Site navigation">
+    <ul class="nav-overlay-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <p class="nav-overlay-footer">© 2026 Fizz</p>
+  </nav>
+
+  <div data-barba="wrapper">
+  <main data-barba="container" data-barba-namespace="product">
+
+    <!-- ══════════════════════════════════════════════════
+         PRODUCT HERO — full-bleed flavor color header
+         (populated by JS based on URL param)
+    ══════════════════════════════════════════════════ -->
+    <section class="product-page-hero" id="product-hero">
+      <div class="product-page-hero-bg"></div>
+      <div class="product-page-hero-content">
+        <div class="product-page-hero-bottle" id="hero-bottle">
+          <!-- SVG injected by JS -->
+        </div>
+        <div class="product-page-hero-text">
+          <div class="eyebrow" id="hero-eyebrow">Signature Flavour</div>
+          <h1 class="product-page-hero-title" id="hero-title">Tropical Storm</h1>
+          <p class="product-page-hero-sub" id="hero-sub">Pineapple · Coconut · Passionfruit</p>
+        </div>
+      </div>
+      <div class="scroll-indicator" style="bottom:3rem;">
+        <div class="scroll-line"></div>
+        <span>Details</span>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         PRODUCT DETAIL
+    ══════════════════════════════════════════════════ -->
+    <div class="product-page-wrap">
+
+      <!-- Visual column -->
+      <div class="product-page-visual">
+        <div class="product-page-main-img" id="product-main-img">
+          <!-- SVG injected by JS -->
+        </div>
+        <div class="product-page-thumbs">
+          <div class="product-page-thumb is-active">Img 1</div>
+          <div class="product-page-thumb">Video</div>
+          <div class="product-page-thumb">360°</div>
+        </div>
+      </div>
+
+      <!-- Info column -->
+      <div class="product-page-info">
+        <div class="eyebrow" id="info-eyebrow">Signature Flavour</div>
+        <h1 class="product-page-title" id="info-title">Tropical Storm</h1>
+        <div class="product-page-price" id="info-price">$34.00</div>
+
+        <div class="product-page-divider"></div>
+
+        <p class="product-page-desc" id="info-desc">
+          Pineapple, coconut, and passionfruit collide in this sun-drenched blend.
+          Zero sugar. Maximum refresh. PressCap™ seal keeps every sip as
+          effervescent as the first.
+        </p>
+
+        <div class="product-page-variants">
+          <div class="product-page-variants-label">Choose Variant</div>
+          <div class="product-page-variant-grid" id="variant-grid">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+
+        <div class="product-page-actions">
+          <div class="qty-selector">
+            <button class="qty-btn" data-qty="-1">−</button>
+            <span class="qty-value">1</span>
+            <button class="qty-btn" data-qty="+1">+</button>
+          </div>
+          <button class="btn btn-primary btn-add-cart">
+            Add to Cart
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width:18px;height:18px;">
+              <path d="M1 1.75A.75.75 0 011.75 1h1.628a1.75 1.75 0 011.734 1.51L5.43 3h13.32a.75.75 0 01.74.871l-1.5 7.5a.75.75 0 01-.74.629H6.35l.181 1.5H16.25a.75.75 0 010 1.5H5.681a.75.75 0 01-.744-.648L3.07 2.5H1.75A.75.75 0 011 1.75zM5.625 15a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zm8.25 0a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Product features -->
+        <div class="product-features">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h4>PressCap™ Seal</h4>
+              <p>Double-lock lid keeps 100% carbonation for up to 48 hours</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm0 1.5a6.5 6.5 0 110 13 6.5 6.5 0 010-13zm.75 3.25a.75.75 0 00-1.5 0V10l-1.97 1.97a.75.75 0 001.06 1.06l2.25-2.25A.75.75 0 0010.75 10V6.75z"/>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h4>36-Hour Cold</h4>
+              <p>Vacuum insulated double-wall keeps drinks ice-cold all day</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h4>Zero Sugar · Natural Flavour</h4>
+              <p>Electrolytes added. No artificial sweeteners or colours</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z"/>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h4>Portable · Dishwasher Safe</h4>
+              <p>680ml capacity. BPA-free. Built for life on the go</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /product-page-info -->
+    </div><!-- /product-page-wrap -->
+
+    <!-- Related / back to shop -->
+    <div style="text-align:center;padding:5rem 6%;">
+      <a href="shop.html" class="btn btn-ghost">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width:18px;height:18px;">
+          <path fill-rule="evenodd" d="M17 10a.75.75 0 01-.75.75H5.612l4.158 3.96a.75.75 0 11-1.04 1.08l-5.5-5.25a.75.75 0 010-1.08l5.5-5.25a.75.75 0 111.04 1.08L5.612 9.25H16.25A.75.75 0 0117 10z" clip-rule="evenodd"/>
+        </svg>
+        Back to all flavours
+      </a>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-brand">
+        <div class="logo">FIZZ</div>
+        <p>Portable hydration, engineered for the bold.</p>
+      </div>
+      <div class="footer-col"><h4>Products</h4><ul><li><a href="shop.html">All Flavours</a></li><li><a href="#">Bundles</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Press</a></li></ul></div>
+      <div class="footer-col"><h4>Support</h4><ul><li><a href="#">FAQ</a></li><li><a href="#">Contact</a></li></ul></div>
+    </footer>
+    <div class="footer-bottom">
+      <span>© 2026 Fizz. All rights reserved.</span>
+      <span>Privacy · Terms</span>
+    </div>
+
+  </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.10.3/dist/barba.umd.min.js"></script>
+  <script>gsap.registerPlugin(ScrollTrigger, Flip, Observer);</script>
+  <script src="js/carousel.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
